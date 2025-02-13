@@ -1,0 +1,494 @@
+<html data-pathToRoot="../../"><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta><title>Grid</title><link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico"></link><script type="text/javascript" src="../../scripts/theme.js"></script><script type="text/javascript" src="../../scripts/searchData.js" defer="true"></script><script type="text/javascript" src="../../scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="../../styles/theme/bundle.css"></link><link rel="stylesheet" href="../../styles/theme/components/bundle.css"></link><link rel="stylesheet" href="../../styles/theme/components/button/bundle.css"></link><link rel="stylesheet" href="../../styles/theme/layout/bundle.css"></link><link rel="stylesheet" href="../../styles/nord-light.css"></link><link rel="stylesheet" href="../../styles/dotty-icons.css"></link><link rel="stylesheet" href="../../styles/filter-bar.css"></link><link rel="stylesheet" href="../../styles/code-snippets.css"></link><link rel="stylesheet" href="../../styles/searchbar.css"></link><link rel="stylesheet" href="../../styles/social-links.css"></link><link rel="stylesheet" href="../../styles/versions-dropdown.css"></link><link rel="stylesheet" href="../../styles/content-contributors.css"></link><link rel="stylesheet" href="../../styles/fontawesome.css"></link><script type="text/javascript" src="../../hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="../../scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="../../scripts/ux.js" defer="true"></script><script type="text/javascript" src="../../scripts/common/component.js" defer="true"></script><script type="text/javascript" src="../../scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="../../scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="../../scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="../../scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="../../scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="../../scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="../../scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="../../scripts/contributors.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="../../scripts/data.js" defer="true"></script><link rel="stylesheet" href="../../styles/apistyles.css"></link><script>var pathToRoot = "../../";</script></head><body onload='function o1Custom() {$("dt:contains(Graph) + dd:contains(Show graph), dt:contains(Graph):has(+ dd:contains(Show graph))").css("display", "none"); $("div.documentableFilter .filterButtonItem[data-key=fInherited]").each(function() { var name = $(this).attr("data-value"); var appStuff = ["App","SimpleSwingApplication","Reactor","SwingApplication","O1AppDefaults","Mirror","Product","Singleton"];if ($.inArray(name, appStuff) < 0) { $(this).trigger("click");}}); $("dl.attributes > dd").css("min-height", "0").css("max-width", "650px");$("dl.attributes").css("display", "grid"); $("button.copy-button").css("display", "none"); $("div.documentableElement:contains(final class timeTest),div.documentableElement:contains(final class testExcursion),div.documentableElement:contains(final class carTest),div.documentableElement:contains(final class testFixedPrice),div.documentableElement:contains(final class testElection)").css("display", "none"); $("div.ni:has(> .nh:has(span:contains(timeTest))),div.ni:has(> .nh:has(span:contains(testExcursion))),div.ni:has(> .nh:has(span:contains(carTest))),div.ni:has(> .nh:has(span:contains(testFixedPrice))),div.ni:has(> .nh:has(span:contains(testElection)))").css("display", "none"); $("div.doc p").css("max-width", "750px"); $("div.doc ul, div.doc ol").css("max-width", "550px"); $("h2:contains(Parameters) + dl.attributes dt").css("font-family", "FiraCode-Regular").css("font-size", "0.8em"); $("code").css("padding", "0px"); $("strong").css("font-style", "italic"); $("dd:contains( (hidden))").css("display", "none"); $("dd:contains( (hidden))").prev().css("display", "none"); $("#header #theme-toggle").css("display", "none"); $("div.documentableElement, div#content").each( (i, d) => { var s = $($(d).find("div.signature:first")[0]).text(); function indexInSignature(name) { var regex = new RegExp("\\W" + name + ":"); var ni = s.search(regex); if (ni < 0) return 99999; else return ni; } $(d).find("div.cover:first h2:contains(Parameters) + dl.attributes:first").each( (i, dlOfParams) => { var paramDTs = $(dlOfParams).find("dt"); if (paramDTs.length > 1) { var ps = []; paramDTs.each( (i, paramDT) => { ps.push({"dt": paramDT, "prio": indexInSignature($(paramDT).text().trim())}); }); ps.sort( (a,b) => { return a.prio - b.prio; } ); ps.forEach( (dtPrio) => { var dt = dtPrio.dt; var dd = $(dt).next(); $(dlOfParams).append(dt, dd); }); } }); }); $("span.project-logo:first").attr("id", "project-logo-duplicate-fixed-by-o1");$("span#dropdown-trigger").removeClass("hidden with-arrow"); $("dt:contains(Self type) + dd:contains(.type), dt:contains(Self type):has(+ dd:contains(.type))").css("display", "none"); $("h2:contains(Attributes) + dl.attributes").each(function(i, d) { if ($(d).text().length == 0) { $(d).css("display", "none").addClass("empty-attribs"); }}); $("h2:contains(Attributes):has(+ dl.empty-attribs)").addClass("empty-attribs").css("display", "none");$("div.documentableElement:contains(ellipse)").each(function(i, d) { var h2 = $(d).find("h2:not(.empty-attribs)"); console.log(h2.length); });$("div.documentableElement").each(function(i, d) { var h2 = $(d).find("h2:not(.empty-attribs)"); if (h2.length == 1) { $(d).find("h2:not(.empty-attribs)").addClass("only-visible-h2-in-elem").css("display", "none"); }; }); $("div.documentableList div.documentableElement:not(.expanded):has(div.signature span.kind:contains(def)) button").each(function() { $(this).trigger("click"); }); $("div.documentableList div.documentableElement:not(.expanded):has(div.signature span.kind:contains(val)) button").each(function() { $(this).trigger("click"); }); $("div.documentableList div.documentableElement:not(.expanded):has(div.signature span.kind:contains(var)) button").each(function() { $(this).trigger("click"); }); $("div.documentableList div.documentableElement:not(.expanded):has(div.signature span.kind:contains(type)) button").each(function() { $(this).trigger("click"); });}
+window.addEventListener("dynamicPageLoad", o1Custom);o1Custom();'><div id=""><div id="header" class="body-small"><div class="header-container-left"><a href="../../" class="logo-container"><span id="project-logo" class="project-logo"><img src="../../project-logo/o1.png"></img></span><span id="project-logo" class="project-logo"><img src="../../project-logo/o1.png"></img></span><span class="project-name h300">CitySim Docs</span></a><span onclick="dropdownHandler(event)" class="text-button with-arrow" id="dropdown-trigger"><a><div class="projectVersion">Fall 2023</div></a></span><div id="version-dropdown" class="dropdown-menu"></div></div><div class="header-container-right"><button id="search-toggle" class="icon-button"></button><span id="theme-toggle" class="icon-button"></span><span id="mobile-menu-toggle" class="icon-button hamburger"></span></div></div><div id="mobile-menu"><div class="mobile-menu-header body-small"><span class="mobile-menu-logo"><span id="project-logo" class="project-logo"><img src="../../project-logo/o1.png"></img></span><span id="project-logo" class="project-logo"><img src="../../project-logo/o1.png"></img></span><span class="project-name h300">CitySim Docs</span></span><button id="mobile-menu-close" class="icon-button close"></button></div><div class="mobile-menu-container body-medium"><input id="mobile-scaladoc-searchbar-input" class="scaladoc-searchbar-input" type="search" placeholder="Find anything"></input><span id="mobile-theme-toggle" class="mobile-menu-item mode"></span></div></div><span id="mobile-sidebar-toggle" class="floating-button"></span><div id="leftColumn" class="body-small"><div class="switcher-container"><a id="api-nav-button" class="switcher h100 selected" href="../../index.html">API</a></div><nav id="api-nav" class="side-menu"><div class="ni n0 expanded"><span class="nh h100 expanded cs"><button class="ar icon-button expanded"></button><a href="../../o1.html"><span class="micon pa"></span><span>o1</span></a></span><div class="ni n1"><span class="nh "><button class="ar icon-button "></button><a href="../city.html"><span class="micon pa"></span><span>city</span></a></span><div class="ni n2"><span class="nh "><button class="ar icon-button "></button><a href="../city/gui.html"><span class="micon pa"></span><span>gui</span></a></span><div class="ni n3 "><span class="nh "><a href="../city/gui/SimulatorApp$.html"><span class="micon ob"></span><span>SimulatorApp</span></a></span></div></div><div class="ni n2 "><span class="nh "><a href="../city/CityMap.html"><span class="micon cl"></span><span>CityMap</span></a></span></div><div class="ni n2 "><span class="nh "><a href="../city/Demographic.html"><span class="micon tr"></span><span>Demographic</span></a></span></div><div class="ni n2 "><span class="nh "><a href="../city/Occupied.html"><span class="micon cl"></span><span>Occupied</span></a></span></div><div class="ni n2 "><span class="nh "><a href="../city/Simulator.html"><span class="micon cl"></span><span>Simulator</span></a></span></div><div class="ni n2 "><span class="nh "><a href="../city/Vacant$.html"><span class="micon ob"></span><span>Vacant</span></a></span></div></div><div class="ni n1 expanded"><span class="nh h100 expanded cs"><button class="ar icon-button expanded"></button><a href="../grid.html"><span class="micon pa"></span><span>grid</span></a></span><div class="ni n2 "><span class="nh "><a href="CompassDir.html"><span class="micon en"></span><span>CompassDir</span></a></span></div><div class="ni n2 "><span class="nh "><a href="CompassDir$.html"><span class="micon ob"></span><span>CompassDir</span></a></span></div><div class="ni n2 expanded"><span class="nh h100 selected"><a href="#"><span class="micon tr"></span><span>Grid</span></a></span></div><div class="ni n2 "><span class="nh "><a href="GridPos.html"><span class="micon cl"></span><span>GridPos</span></a></span></div><div class="ni n2 "><span class="nh "><a href="GridPos$.html"><span class="micon ob"></span><span>GridPos</span></a></span></div></div></div></nav></div><div id="footer" class="body-small"><div class="left-container">Generated with</div><div class="right-container"><div class="text">This document is part of the ebook for O1 (aka CS-A1110 Programming 1), a course at Aalto University.</div></div><div class="text-mobile">This document is part of the ebook for O1 (aka CS-A1110 Programming 1), a course at Aalto University.</div></div><div id="scaladoc-searchBar"></div><div id="main"><div class="breadcrumbs container"><a href="../../index.html">CitySim Docs</a>/<a href="../../o1.html">o1</a>/<a href="../grid.html">o1.grid</a>/<a href="Grid.html">Grid</a></div><div id="content" class="body-medium"><div><div class="cover-header">
+ <span class="icon"><span class="micon tr"></span></span>
+ <h1 class="h600 single">Grid</h1>
+</div>
+<div class="fqname body-large">
+ <span>o1.grid.Grid</span>
+</div>
+<div class="main-signature mono-small-block">
+ <div class="signature">
+  <span class="modifiers"></span><span class="kind"><span t="k">trait </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html" t="n" class="documentableName ">Grid</a>[<span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#Element-0" t="t">Element</a>](<span t="k"></span><span t="k">val </span><a href="../../../../O1Library/doc/o1/grid/Grid.html#width-0" t="n">width</a>: <a href="https://scala-lang.org/api/3.x/scala/Int.html" t="t">Int</a>, <span t="k">val </span><a href="../../../../O1Library/doc/o1/grid/Grid.html#height-0" t="n">height</a>: <a href="https://scala-lang.org/api/3.x/scala/Int.html" t="t">Int</a>)
+ </div>
+</div>
+<div class="cover">
+ <div class="doc">
+  <p>The trait <code>Grid</code> represents rectangular grids that contain elements of a particular kind. Each element in a grid is located at a unique pair of coordinates, represented as a <a href="../../../../O1Library/doc/o1/grid/GridPos.html">GridPos</a>.</p> 
+  <p>X coordinates run from 0 to <code>width-1</code>, y coordinates from 0 to <code>height-1</code>. (0,0) corresponds to the upper left corner of the grid.</p> 
+  <p>There are different kinds of grids: the type of element that a grid contains is defined by the grid’s type parameter. For instance, <code>Grid[Square]</code> is a grid where each pair of x and y coordinates contains a <code>Square</code> object, and <code>Grid[House]</code> is a grid containing <code>House</code> objects.</p> 
+  <p>A <code>Grid</code> is mutable: it is possible to replace an element at a particular <code>GridPos</code> with another. (Depending on the element type, the elements may be individually mutable, too.) The width and height of a grid never change, however.</p> 
+  <p>Upon creation, a <code>Grid</code> initializes itself by calling <a href="../../../../O1Library/doc/o1/grid/Grid.html#initialElements-0">initialElements</a>, which produces an initial state for the grid.</p> 
+  <p>This trait has an alias in the top-level package <a href="../../../../O1Library/doc/o1.html">o1</a>, so it’s accessible to students simply via <code>import o1.*</code>.</p> 
+ </div>
+ <section id="attributes">
+  <h2 class="h500">Parameters</h2>
+  <dl class="attributes">
+   <dt class="body-small">
+    height
+   </dt>
+   <dd class="body-medium">
+    <p>the number of elements in each column of the grid</p> 
+   </dd>
+   <dt class="body-small">
+    width
+   </dt>
+   <dd class="body-medium">
+    <p>the number of elements in each row of the grid</p> 
+   </dd>
+  </dl>
+  <h2 class="h500">Attributes</h2>
+  <dl class="attributes">
+   <dt class="body-small">
+    Graph
+   </dt>
+   <dd class="body-medium">
+    <div id="inheritance-diagram" class="diagram-class showGraph">
+     <button type="button" class="label-only-button" onclick="zoomOut()">Reset zoom</button><button type="button" class="label-only-button" onclick="hideGraph()">Hide graph</button><button type="button" class="label-only-button" onclick="showGraph()">Show graph</button>
+     <svg id="graph"></svg>
+     <script type="text/dot" id="dot"> digraph g {
+ node0 [id=node0, label="<span style=\"color: #FFFFFF;\">trait <a href=\"../../../../O1Library/doc/o1/grid/Grid.html\" t=\"n\">Grid</a>[<span t=\"t\">Element</span>]</span>", class="trait vertex"];
+node1 [id=node1, label="<span style=\"color: #FFFFFF;\">class <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\" t=\"n\">Object</a></span>", class="class vertex"];
+node2 [id=node2, label="<span style=\"color: #FFFFFF;\">class <a href="https://scala-lang.org/api/3.x/scala/Any.html" t="n">Any</a></span>", class="class vertex"];
+node3 [id=node3, label="<span style=\"color: #FFFFFF;\">trait <a href="https://scala-lang.org/api/3.x/scala/Matchable.html" t="n">Matchable</a></span>", class="trait vertex"];
+node4 [id=node4, label="<span style=\"color: #FFFFFF;\">class <a href=\"../city/CityMap.html\" t=\"n\">CityMap</a></span>", class="class vertex"];
+
+
+ node0 -> node1;
+node1 -> node2;
+node1 -> node3;
+node3 -> node2;
+node4 -> node0;
+
+}
+</script>
+    </div>
+   </dd>
+   <dt class="body-small">
+    Supertypes
+   </dt>
+   <dd class="body-medium">
+    <div class="mono-small-block supertypes">
+     <div>
+      class <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" t="n">Object</a>
+     </div>
+     <div>
+      trait <a href="https://scala-lang.org/api/3.x/scala/Matchable.html" t="n">Matchable</a>
+     </div>
+     <div>
+      class <a href="https://scala-lang.org/api/3.x/scala/Any.html" t="n">Any</a>
+     </div><span></span>
+    </div>
+   </dd>
+   <dt class="body-small">
+    Known subtypes
+   </dt>
+   <dd class="body-medium">
+    <div class="mono-small-block subtypes">
+     <div>
+      class <a href="../city/CityMap.html" t="n">CityMap</a>
+     </div><span></span>
+    </div>
+   </dd>
+  </dl>
+ </section>
+</div>
+<section id="members-list">
+ <h2 class="h500">Members list</h2>
+ <div class="documentableFilter">
+  <div class="filtersContainer"></div>
+  <input class="filterableInput" placeholder="Filter by any phrase" data-test-id="filterBarInput" type="search"><button class="clearButton label-only-button" data-test-id="filterBarClearButton">Clear all</button>
+ </div>
+ <div class="membersList expand">
+  <div class="tabs">
+   <div class="contents">
+    <section id="Value-members">
+     <div data-togglable="Value members" class="tab expand">
+      <div class="member-group-header">
+       <h3 data-togglable="Value members" class="h400">Value members</h3>
+      </div>
+      <section id="Abstract-methods">
+       <div class="documentableList expand">
+        <div class="documentableList-expander">
+         <button class="icon-button show-content expand"></button>
+         <h4 class="groupHeader h200">Abstract methods</h4>
+        </div>
+        <div class="documentableElement" id="initialElements-0">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#initialElements-0" t="n" class="documentableName ">initialElements</a>: <a href="https://scala-lang.org/api/3.x/scala/collection/immutable/Seq.html" t="t">Seq</a>[<span t="t">Element</span>]
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Generates the elements that initially occupy the grid. This method is automatically invoked by every <code>Grid</code> object upon creation. Subtypes should implement this method as appropriate for the particular sort of grid desired.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Generates the elements that initially occupy the grid. This method is automatically invoked by every <code>Grid</code> object upon creation. Subtypes should implement this method as appropriate for the particular sort of grid desired.</p> 
+              <p>Note that since this method produces the <code>Grid</code>’s initial contents, it gets called during initialization before the <code>Grid</code> actually has any elements as content. Therefore, subtypes’ implementations of this method must not depend on the state of the new <code>Grid</code> (by calling <code>neighbors</code> or <code>elementAt</code>, for instance) or attempt to modify the <code>Grid</code> (with <code>update</code>, for instance).</p> 
+              <p>This method is meant for initialization purposes only. To access all the elements of an already-initialized <code>Grid</code>, call <a href="../../../../O1Library/doc/o1/grid/Grid.html#allElements-0">allElements</a> instead.</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small">
+              <dt class="body-small">
+               Returns
+              </dt>
+              <dd class="body-medium">
+               <p>a collection of size <code>width</code> times <code>height</code> that contains the initial grid elements. The first element in the collection will appear at <code>GridPos</code> (0,0), the second at (1,0), and so on, filling in the first row before continuing on the second row at (0,1).</p> 
+              </dd>
+             </dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section id="Concrete-methods">
+       <div class="documentableList expand">
+        <div class="documentableList-expander">
+         <button class="icon-button show-content expand"></button>
+         <h4 class="groupHeader h200">Concrete methods</h4>
+        </div>
+        <div class="documentableElement" id="allElements-0">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#allElements-0" t="n" class="documentableName ">allElements</a>: <a href="https://scala-lang.org/api/3.x/scala/collection/immutable/Vector.html" t="t">Vector</a>[<span t="t">Element</span>]
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Returns a collection of all the elements currently in the grid.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Returns a collection of all the elements currently in the grid.</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="allPositions-0">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#allPositions-0" t="n" class="documentableName ">allPositions</a>: <a href="https://scala-lang.org/api/3.x/scala/collection/immutable/Vector.html" t="t">Vector</a>[<a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>]
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Returns a collection of all the locations on the grid.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Returns a collection of all the locations on the grid.</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="apply-fffff8c5">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#apply-fffff8c5" t="n" class="documentableName ">apply</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location-0" t="n">location</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>): <span t="t">Element</span>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Returns the element at the given pair of coordinates. (This does the same as <code>elementAt</code>.)</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Returns the element at the given pair of coordinates. (This does the same as <code>elementAt</code>.)</p> 
+             </div>
+             <h2 class="h200">Parameters</h2>
+             <dl class="attributes attributes-small">
+              <dt class="body-small">
+               location
+              </dt>
+              <dd class="body-medium">
+               <p>a location on the grid (which must be within range or this method will fail with an error)</p> 
+              </dd>
+             </dl>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="contains-56e">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#contains-56e" t="n" class="documentableName ">contains</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location-0" t="n">location</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>): <a href="https://scala-lang.org/api/3.x/scala/Boolean.html" t="t">Boolean</a>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Determines whether the grid contains the given pair of coordinates. For instance, a grid with a width and height of 5 will contain (0, 0) and (4, 4) but not (-1, -1), (4, 5) or (5, 4).</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Determines whether the grid contains the given pair of coordinates. For instance, a grid with a width and height of 5 will contain (0, 0) and (4, 4) but not (-1, -1), (4, 5) or (5, 4).</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="elementAt-fffff8c5">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#elementAt-fffff8c5" t="n" class="documentableName ">elementAt</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location-0" t="n">location</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>): <span t="t">Element</span>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Returns the element at the given pair of coordinates. (This does the same as <code>apply</code>.)</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Returns the element at the given pair of coordinates. (This does the same as <code>apply</code>.)</p> 
+             </div>
+             <h2 class="h200">Parameters</h2>
+             <dl class="attributes attributes-small">
+              <dt class="body-small">
+               location
+              </dt>
+              <dd class="body-medium">
+               <p>a location on the grid (which must be within range or this method will fail with an error)</p> 
+              </dd>
+             </dl>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="neighbors-fffff049">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#neighbors-fffff049" t="n" class="documentableName ">neighbors</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#middleLoc-0" t="n">middleLoc</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>, <span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#includeDiagonals-0" t="n">includeDiagonals</a>: <a href="https://scala-lang.org/api/3.x/scala/Boolean.html" t="t">Boolean</a>): <a href="https://scala-lang.org/api/3.x/scala/collection/immutable/Vector.html" t="t">Vector</a>[<span t="t">Element</span>]
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Returns a vector of all the neighboring elements of the element indicated by the first parameter. Depending on the second parameter, either only the four neighbors in cardinal compass directions (north, east, south, west) are considered, or the four diagonals as well.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Returns a vector of all the neighboring elements of the element indicated by the first parameter. Depending on the second parameter, either only the four neighbors in cardinal compass directions (north, east, south, west) are considered, or the four diagonals as well.</p> 
+              <p>Note that an element at the grid’s edge has fewer neighbors than one in the middle. For instance, the element at (0, 0) of a 5-by-5 grid has only three neighbors, diagonals included.</p> 
+             </div>
+             <h2 class="h200">Parameters</h2>
+             <dl class="attributes attributes-small">
+              <dt class="body-small">
+               includeDiagonals
+              </dt>
+              <dd class="body-medium">
+               <p><code>true</code> if diagonal neighbors also count (resulting in up to eight neighbors), <code>false</code> if only cardinal directions count (resulting in up to four)</p> 
+              </dd>
+              <dt class="body-small">
+               middleLoc
+              </dt>
+              <dd class="body-medium">
+               <p>the location between the neighbors</p> 
+              </dd>
+             </dl>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="swap-ffffff0c">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#swap-ffffff0c" t="n" class="documentableName ">swap</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location1-0" t="n">location1</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>, <span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location2-0" t="n">location2</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>): <a href="https://scala-lang.org/api/3.x/scala/Unit.html" t="t">Unit</a>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Swaps the elements at two given locations on the grid. The given locations must be within range or this method will fail with an error.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Swaps the elements at two given locations on the grid. The given locations must be within range or this method will fail with an error.</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="update-ffffffd1">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#update-ffffffd1" t="n" class="documentableName ">update</a>(<span t="k"></span><span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#location-0" t="n">location</a>: <a href="../../../../O1Library/doc/o1/grid/GridPos.html" t="t">GridPos</a>, <span t="k"></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#newElement-0" t="n">newElement</a>: <span t="t">Element</span>): <a href="https://scala-lang.org/api/3.x/scala/Unit.html" t="t">Unit</a>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Modifies the grid by replacing the existing element at the given location with the new element.</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Modifies the grid by replacing the existing element at the given location with the new element.</p> 
+             </div>
+             <h2 class="h200">Parameters</h2>
+             <dl class="attributes attributes-small">
+              <dt class="body-small">
+               location
+              </dt>
+              <dd class="body-medium">
+               <p>a location on the grid (which must be within range or this method will fail with an error)</p> 
+              </dd>
+              <dt class="body-small">
+               newElement
+              </dt>
+              <dd class="body-medium">
+               <p>the new element that replaces the old one at <code>location</code></p> 
+              </dd>
+             </dl>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <section id="Concrete-fields">
+       <div class="documentableList expand">
+        <div class="documentableList-expander">
+         <button class="icon-button show-content expand"></button>
+         <h4 class="groupHeader h200">Concrete fields</h4>
+        </div>
+        <div class="documentableElement" id="height-0">
+         <div class="documentableElement-expander">
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">val </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#height-0" t="n" class="documentableName ">height</a>: <a href="https://scala-lang.org/api/3.x/scala/Int.html" t="t">Int</a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="size-0">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">val </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#size-0" t="n" class="documentableName ">size</a>: <a href="https://scala-lang.org/api/3.x/scala/Int.html" t="t">Int</a>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>the number of elements in this grid, in total. (Equals <code>width</code> times <code>height</code>.)</p> 
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>the number of elements in this grid, in total. (Equals <code>width</code> times <code>height</code>.)</p> 
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="documentableElement" id="width-0">
+         <div class="documentableElement-expander">
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">val </span></span><a href="../../../../O1Library/doc/o1/grid/Grid.html#width-0" t="n" class="documentableName ">width</a>: <a href="https://scala-lang.org/api/3.x/scala/Int.html" t="t">Int</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+    </section>
+   </div>
+  </div>
+ </div>
+</section></div><div id="toc" class="body-small" style="display: none;"><div id="toc-container"><span class="toc-title h200">In this article</span><nav class="toc-nav"><ul class="toc-list"><li><a href="#attributes">Value parameters</a></li><li><a href="#members-list">Members list</a><ul><li><a href="#Value-members">Value members</a><ul><li><a href="#Abstract-methods">Abstract methods</a></li><li><a href="#Concrete-methods">Concrete methods</a></li><li><a href="#Concrete-fields">Concrete fields</a></li></ul></li></ul></li></ul></nav></div></div></div><div id="footer" class="body-small mobile-footer"><div class="left-container">Generated with</div><div class="right-container"><a href="https://github.com/lampepfl/dotty"><button class="icon-button gh"></button></a><a href="https://twitter.com/scala_lang"><button class="icon-button twitter"></button></a><a href="https://discord.com/invite/scala"><button class="icon-button discord"></button></a><a href="https://gitter.im/scala/scala"><button class="icon-button gitter"></button></a><div class="text">This document is part of the ebook for O1 (aka CS-A1110 Programming 1), a course at Aalto University.</div></div><div class="text-mobile">This document is part of the ebook for O1 (aka CS-A1110 Programming 1), a course at Aalto University.</div></div></div></div></body></html>
